@@ -1,0 +1,45 @@
+print("Welcome to KBC \n")
+name=str(input("Enter Your Name :"))
+print("Hello",name,"\n")
+print("Here is Your First Question \n ")
+print("Who is the Prime Minister of India ? \n")
+list=["Narender Modi","Rahul Gandhi","Manmohan Singh","Amit Shah"]
+print(list,"\n")
+ans=str(input("Enter Your answer"))
+sum=0
+if(ans=="Narender Modi"):
+  print("You Won 1000 Rs \n")
+  sum=sum+1000
+else:
+  print("You lose the Game \n")
+  
+print("Here is Your second Question \n")
+print("Who is the president of India \n ?")
+list=["Droupadi Murmu","Ram Nath kovind","Itishree Murmu","Jagdeep Dhankhar"]
+print(list,"\n")
+ans=str(input("Enter Your Answer : "))
+if(ans=="Droupadi Murmu"):
+  print("You Won 5000 Rs\n")
+  sum=sum+5000
+  print("Total Amount You Have :",sum)
+else:
+  print("You lose the Game")
+  print("Total Amount You won",sum)
+
+print("Here is Your Third Question \n")
+print("Which god is also known as ‘Gauri Nandan’? \n")
+list=["Ganesha","Shiva","Agni","Hunuman"]
+print(list,"\n")
+ans=str(input("Enter Your Answer : \n"))
+if(ans=="Ganesha"):
+  print("You Won 10000 Rs\n")
+  sum=sum+10000
+  print("Total Amount You Have :",sum,"\n")
+  print("Congratulations you Answered all the Questions Correctly \n")
+  
+else:
+  print("You lose the Game")
+  print("Total Amount You won",sum)
+
+print("Total Amount You won",sum,"\n")
+print("Thank You For Playing KBC")
