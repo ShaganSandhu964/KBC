@@ -39,6 +39,51 @@ if(ans=="Ganesha"):
   
 else:
   print("You lose the Game")
+
+
+
+
+
+## Here is the code using Loop an List of List
+print("Welcome to KBC \n")
+name=str(input("Enter Your Name : "))
+print("Hello",name,"\n")
+questions=[["Who is the Prime Minister of India ?" ,"Narender Modi","Rahul Gandhi","Manmohan Singh","Amit Shah",1],
+           ["Who is the president of India ?","Droupadi Murmu","Ram Nath kovind","Itishree Murmu","Jagdeep Dhankhar",1],
+           ["Which god is also known as ‘Gauri Nandan’?","Ganesha","Shiva","Agni","Hunuman",1],
+           ["What does not grow on tree according to a popular Hindi saying?","Money","Flower","Tree","Fruits",1],
+           ["Which city is known as the Pink City of India?","Banglore","Maysore","Jaipur","Kochi",3],
+           ["Who wrote India's National Anthem?","Rabindranath Tagore","Lal Bahadur Shastri","Chetan Bhagat","RK Narayan",1]
+          ]
+
+levels = [1000, 2000, 3000,5000,10000,20000]
+money=0
+count=0
+for i in range(0,len(questions)):
+    question=questions[i]
+    print(f"Here is Your question No.{i} for Rs{levels[i]} \n")
+    print(f" {question[0]} \n")
+    print(f"a. {question[1]}            b. {question[2]}")
+    print(f"c. {question[3]}            d. {question[3]} \n")
+    ans=int(input("Enter Your answer Here : or You can quit the Game(0/quit) : "))
+    if(ans==0):
+       money=levels[i-1]
+       break
+    if(ans==question[-1]):
+        print(f"Correct Answer ,You have won Rs. {levels[i]} \n")
+        money=money+levels[i]
+        count=count+1
+        if(i==4):
+            money=10000
+        elif(i==9):
+            money=320000
+        elif(i==14):
+            money=10000000
+    else:
+        print("Wrong answer!")
+        break
+print(f"\nYour take home money is {money} \n")
+print(f"Number of correct answer {count}")
   print("Total Amount You won",sum)
 
 print("Total Amount You won",sum,"\n")
